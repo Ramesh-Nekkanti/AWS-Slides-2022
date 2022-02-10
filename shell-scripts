@@ -1,1 +1,95 @@
-Shell scripts for practise:
+1. firsh.sh:
+============
+
+#!/bin/bash
+
+# Adding two number
+
+a=$1
+b=$2
+
+echo " Total number of parametes passed $# "
+echo " The first  parameter is $1 "
+echo " the second parameter is $2"
+
+((sum=$a+$b))
+
+echo "Sum of $a and $b is $sum"
+
+2. while + if :
+  ============
+#!/bin/bash
+
+valid=true
+count=1
+
+while [ $valid ]
+do
+echo " The count value is $count "
+if [ $count -eq 5 ];
+then
+break
+fi
+((count++))
+done
+
+3. for:
+   ====
+#!/bin/bash
+
+for (( count=1; count<6; count++ ))
+do
+echo " The value is $count "
+done
+
+4. user-input:
+   ===========
+   
+   #!/bin/bash
+
+echo "Enter your Username"
+read username
+
+echo "Enter your password"
+read password
+
+if [[ $username == "admin" && $password == "pass123" ]];
+then
+echo " welcome $username your password is $password "
+else
+echo " Invalid credentials for $username on $(date) "
+
+fi
+
+5. Function:
+   =========
+   #!/bin/bash
+
+function greeting() {
+
+str="Hello, $name"
+echo $str
+}
+
+echo "Enter your name"
+read name
+
+val=$(greeting)
+echo "Return from function is $val"
+
+6. read file:
+
+#!/bin/bash
+
+file='sample.txt'
+
+while read line;
+do
+echo $line
+done < $file
+
+
+6. Read File:
+   =========
+
+
