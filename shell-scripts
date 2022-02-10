@@ -91,5 +91,13 @@ done < $file
 
 6. Read File:
    =========
+#!/bin/bash
+
+file='sample.txt'
+
+while read line;
+do
+echo $line
+done < $file
 
 
